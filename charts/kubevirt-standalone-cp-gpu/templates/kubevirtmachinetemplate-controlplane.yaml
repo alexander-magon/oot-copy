@@ -76,6 +76,7 @@ spec:
                   {{- range .Values.controlPlane.defaultNetworkInterface.sriov }}
                   - name: {{ .name }}
                     sriov: {}
+                    tag: {{ .name }}
                   {{- end }}
                   {{- else }}
                   - name: default
